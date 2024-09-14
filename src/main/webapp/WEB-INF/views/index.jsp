@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="res/img/icon.svg" />
+    <link rel="icon" href="res/img/icon.svg"/>
     <title>JihLink</title>
     <style>
         /* CSS Reset */
@@ -26,7 +26,6 @@
 
         .container {
             background-color: #fff;
-            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             width: 100%;
@@ -118,17 +117,17 @@
         .console {
             position: relative;
             background-color: #333;
+            border-radius: 10px;
             color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);"
             font-family: monospace;
-            padding: 10px;
-            border-radius: 5px;
             height: 200px;
             overflow-y: auto;
-            margin-top: 20px;
+            padding: 10px;
         }
 
         #console-log {
-            height:100%; /* Adjust to make space for button */
+            height: 100%; /* Adjust to make space for button */
             overflow-y: auto;
         }
 
@@ -150,72 +149,131 @@
         #clear-console-btn:hover img {
             opacity: 0.7;
         }
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
 
-            .input-group input[type="text"], .input-group-url input[type="text"] {
-                font-size: 14px;
+
+        ::-webkit-scrollbar {
+            width: 12px; /* Set width for vertical scrollbar */
+            height: 12px; /* Set height for horizontal scrollbar */
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background:transparent; /* Background color of the scrollbar track */
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #e8e8e8; /* Color of the scrollbar thumb */
+            border-radius: 10px;
+        }
+
+        /* Style the scrollbar when hovered */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #b9b8b8; /* Darker color on hover */
+        }
+
+        button:active {
+            animation: click 0.2s ease;
+        }
+
+        @keyframes click {
+            0% {
+                transform: scale(1); /* Default size */
+            }
+            50% {
+                transform: scale(0.95); /* Slightly smaller when pressed */
+            }
+            100% {
+                transform: scale(1); /* Back to normal size */
             }
         }
+
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>JihLink</h1>
+    <div style="
+            padding: 20px;
+            border-radius: 10px;
+            ">
+        <h1>JihLink</h1>
 
-    <div class="input-group">
-        <label for="original-url">Enter the URL to shorten:</label>
-        <input type="text" id="original-url" placeholder="https://example.com"/>
+        <div class="input-group">
+            <label for="original-url">Enter the URL to shorten:</label>
+            <input type="text" id="original-url" placeholder="https://example.com"/>
+        </div>
+
+        <div class="input-group">
+            <button id="generate-btn">Generate</button>
+        </div>
+
+        <div class="input-group input-group-url">
+            <input style="border: none" disabled type="text" id="shorten-url" placeholder="Shortened URL"/>
+            <button id="copy-btn" disabled>
+                <img src="https://img.icons8.com/material-outlined/24/000000/copy.png" alt="Copy"/>
+            </button>
+        </div>
     </div>
-
-    <div class="input-group">
-        <button id="generate-btn">Generate</button>
-    </div>
-
-    <div class="input-group input-group-url">
-        <input style="border: none" disabled type="text" id="shorten-url" placeholder="Shortened URL"/>
-        <button id="copy-btn" disabled>
-            <img src="https://img.icons8.com/material-outlined/24/000000/copy.png" alt="Copy"/>
-        </button>
-    </div>
-
-    <!-- Console to display status messages -->
     <div class="console">
-        <button id="clear-console-btn">
+        <button class="b" id="clear-console-btn" style="transition: all 0.2s ease;">
             <img src="https://img.icons8.com/material-outlined/24/000000/erase.png" alt="Clear"/>
         </button>
+
         <div id="console-log">
+            <pre>
+                  _
+    __      _____| | ___ ___  _ __ ___   ___
+    \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+     \ V  V /  __/ | (_| (_) | | | | | |  __/
+      \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
+</pre>
+
         </div>
     </div>
 
 </div>
 
 <script>
+
     const logToConsole = (message) => {
         const consoleLog = document.getElementById('console-log');
         const newMessage = document.createElement('pre');
 
-        // Check if message is a string and needs parsing
         let parsedMessage;
         try {
             parsedMessage = typeof message === 'string' ? JSON.parse(message) : message;
+            console.log(parsedMessage);
+            if(parsedMessage.status==="error"){
+                newMessage.style.color="tomato";
+            }
         } catch (e) {
-            parsedMessage=message;
+
+            if (message.toLowerCase().includes("error")){
+                newMessage.style.color="tomato";
+            }
+
+            parsedMessage = message;
         }
+
+
+
 
         newMessage.innerHTML = formatJSON(parsedMessage); // Use formatted JSON
         consoleLog.appendChild(newMessage);
+        newMessage.style.marginBottom="10px";
         consoleLog.scrollTop = consoleLog.scrollHeight;  // Auto-scroll to the bottom
     };
 
+
     document.getElementById('generate-btn').addEventListener('click', function () {
+
 
         const originalUrl = document.getElementById('original-url').value;
         const shortenUrlInput = document.getElementById('shorten-url');
         const copyButton = document.getElementById('copy-btn');
+
+        shortenUrlInput.value = "";
+        copyButton.disabled = true;
 
         if (originalUrl.trim() === "") {
             logToConsole("Error: No URL entered.");
@@ -241,8 +299,8 @@
                 response.json()
             )
             .then((result) => {
-                if(result.status=="success"){
-                    shortenUrlInput.value=result.data;
+                if (result.status == "success") {
+                    shortenUrlInput.value = result.data;
                     copyButton.disabled = false;
                 }
 
@@ -252,7 +310,6 @@
             .catch((error) => {
                 console.error(error)
             });
-
 
 
     });
@@ -266,20 +323,19 @@
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
-
             .replace(/"(.*?)"/g, '<span class="string">"$1"</span>')
             .replace(/(\d+)/g, '<span class="number">$1</span>')
             .replace(/(true|false)/g, '<span class="boolean">$1</span>')
-            .replace(/(null)/g, '<span class="null">$1</span>');
+            .replace(/(null)/g, '<span class="null">$1</span>')
     };
 
 
     document.getElementById('copy-btn').addEventListener('click', function () {
+
         const shortenUrlInput = document.getElementById('shorten-url');
 
-        // Copy the shortened URL to the clipboard
         shortenUrlInput.select();
-        shortenUrlInput.setSelectionRange(0, 99999); // For mobile devices
+        shortenUrlInput.setSelectionRange(0, 99999);
 
         navigator.clipboard.writeText(shortenUrlInput.value)
             .then(() => {
@@ -291,10 +347,13 @@
             });
     });
 
+
+
+
+
     document.getElementById('clear-console-btn').addEventListener('click', function () {
         const consoleLog = document.getElementById('console-log');
         consoleLog.innerHTML = ''; // Clear all content
-        logToConsole("Console cleared.");
     });
 </script>
 
