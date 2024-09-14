@@ -42,8 +42,9 @@ public class Create {
 
         Response response=new Response();
         if(!(link.startsWith("http://") ||link.startsWith("https://"))){
-            response.setStatus("Error");
             response.setMessage("Invalid Url (Url Should contain http:// or https://) Eg:-https://www.google.com");
+            response.setStatus("error");
+            return response;
         }else{
             try {
                 String shortId = shortLink.create(link);

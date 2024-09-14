@@ -33,15 +33,23 @@ public class Redirect {
     public Response getShortLink(@PathParam("linkId") String linkId){
         String link=shortLink.getRealLink(linkId);
         if (link == null || link.isEmpty()) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Link not found").build();
+            return Response.status(Response.Status.FOUND)
+                    .location(java.net.URI.create("404"))
+                    .build();
         }
         return Response.status(Response.Status.FOUND)
                 .location(java.net.URI.create(link))
                 .build();
     }
     @GET
-    @Path("")
+    @Path("/home")
     public Viewable login() {
         return new Viewable("/views/index.jsp");
+    }
+
+    @GET
+    @Path("/404")
+    public Viewable notFound() {
+        return new Viewable("/views/404.jsp");
     }
 }
