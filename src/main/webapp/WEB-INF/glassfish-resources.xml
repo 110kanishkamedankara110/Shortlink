@@ -6,16 +6,16 @@
     <property name="serverName" value="localhost"/>
     <property name="portNumber" value="3306"/>
 
-    <property name="databaseName" value="short_link"/>
-    <property name="User" value="root"/>
-    <property name="Password" value="0724886404Was"/>
-    <property name="URL" value="jdbc:mysql://localhost:3306/short_link?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull"/>
+<!--    <property name="databaseName" value="short_link"/>-->
+<!--    <property name="User" value="root"/>-->
+<!--    <property name="Password" value="0724886404Was"/>-->
+<!--    <property name="URL" value="jdbc:mysql://localhost:3306/short_link?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull"/>-->
 
 
-<!--        <property name="databaseName" value="jiat_short_link"/>-->
-<!--        <property name="User" value="exon_short_link"/>-->
-<!--        <property name="Password" value="$K1d70qc0"/>-->
-<!--        <property name="URL" value="jdbc:mysql://localhost:3306/jiat_short_link?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull"/>-->
+        <property name="databaseName" value="jiat_short_link"/>
+        <property name="User" value="exon_short_link"/>
+        <property name="Password" value="$K1d70qc0"/>
+        <property name="URL" value="jdbc:mysql://localhost:3306/jiat_short_link?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;zeroDateTimeBehavior=convertToNull"/>
 
 
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>

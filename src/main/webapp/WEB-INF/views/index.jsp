@@ -226,6 +226,7 @@
     \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
      \ V  V /  __/ | (_| (_) | | | | | |  __/
       \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
+
 </pre>
 
         </div>
@@ -275,12 +276,14 @@
         shortenUrlInput.value = "";
         copyButton.disabled = true;
 
+        const consoleLog = document.getElementById('console-log');
+        consoleLog.innerHTML = ''; // Clear all content
+
         if (originalUrl.trim() === "") {
             logToConsole("Error: No URL entered.");
             return;
         }
-        const consoleLog = document.getElementById('console-log');
-        consoleLog.innerHTML = ''; // Clear all content
+
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
