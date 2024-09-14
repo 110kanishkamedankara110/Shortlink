@@ -9,8 +9,14 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="../res/style.css">
 </head>
 <body>
-<h1>Hello</h1>
+    <h1 class="header">Short Link Generator</h1>
+
+
+
+    <script src="/res/script.js"></script>
 </body>
+
 </html>

@@ -41,17 +41,21 @@ public class Create {
     private Response createResponse(String link) {
 
         Response response=new Response();
+        if(!(link.startsWith("http://") ||link.startsWith("https://"))){
+            response.setStatus("Error");
+            response.setMessage("Invalid Url (Url Should contain http:// or https://) Eg:-https://www.google.com");
+        }else{
+            try {
+                String shortId = shortLink.create(link);
+                String baseUrl = req.getScheme() + "://" + req.getServerName();
+                response.setData(baseUrl + req.getContextPath() + "/" + shortId);
+                response.setStatus("success");
+                response.setMessage("Link Created Successfully");
 
-        try {
-            String shortId = shortLink.create(link);
-            String baseUrl = req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort();
-            response.setData(baseUrl + req.getContextPath() + "/" + shortId);
-            response.setStatus("success");
-            response.setMessage("Success");
-
-        }catch (Exception e){
-            response.setStatus("Failed");
-            response.setMessage(e.getMessage());
+            }catch (Exception e){
+                response.setStatus("Failed");
+                response.setMessage(e.getMessage());
+            }
         }
         return response;
     }

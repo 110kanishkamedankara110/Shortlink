@@ -6,6 +6,7 @@
         <jta-data-source>java:app/shortUrl-system</jta-data-source>
 
         <class>com.phoenix.shortLink.model.ShortUrl</class>
+        <class>com.phoenix.shortLink.model.ShortUrl</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>

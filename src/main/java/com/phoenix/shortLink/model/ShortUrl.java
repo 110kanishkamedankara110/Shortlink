@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Entity
 @Getter
 @Setter
+@Cacheable(false)
 @Table(name = "short_link")
 public class ShortUrl implements Serializable {
     @Id
@@ -16,6 +17,7 @@ public class ShortUrl implements Serializable {
     private int id;
     @Column(name = "short_url_id", unique = true, nullable = false)
     private String shortUrlId;
-    @Column(name = "link")
-    private String link;
+    @OneToOne
+    @JoinColumn(name = "link_id", referencedColumnName = "id")
+    private Link link;
 }

@@ -9,29 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca5b65e4-b412-49e8-88d2-ef5ec49f257e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/config/JerseyConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/Redirect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/api/Create.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/dto/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/GetAllLinksBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/model/ShortUrl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/remote/CreateShortLink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/remote/GetAllLinks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/util/UrlUuidShortener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="ca5b65e4-b412-49e8-88d2-ef5ec49f257e" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/model/Link.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/res/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/res/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/config/JerseyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/config/JerseyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/Redirect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/Redirect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/api/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/api/Create.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/model/ShortUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/model/ShortUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/remote/CreateShortLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/remote/CreateShortLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/util/UrlUuidShortener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/util/UrlUuidShortener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +36,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -68,6 +64,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
     &quot;GlassFish Server.GlassFish 6.2.5.executor&quot;: &quot;Run&quot;,
     &quot;Maven.ShortLink [clean,validate,compile...].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -76,12 +73,13 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/BLACKBOX/IdeaProjects/ShortLink/src/main/webapp/WEB-INF&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.34712642&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -92,13 +90,22 @@
       <recent name="C:\Users\BLACKBOX\IdeaProjects\ShortLink\src\main\webapp\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BLACKBOX\IdeaProjects\ShortLink\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\BLACKBOX\IdeaProjects\ShortLink\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\BLACKBOX\IdeaProjects\ShortLink\src\main\webapp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.phoenix.shortLink.controller" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 6.2.5">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ShortLink" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GlassFish 6.2.5" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 6.2.5" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -175,6 +182,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -196,10 +208,40 @@
       <workItem from="1725438413771" duration="139000" />
       <workItem from="1725446806936" duration="2237000" />
       <workItem from="1725454074862" duration="76000" />
+      <workItem from="1725494686334" duration="100000" />
+      <workItem from="1725503265885" duration="35000" />
+      <workItem from="1725503378976" duration="613000" />
+      <workItem from="1725591189129" duration="1329000" />
+      <workItem from="1725594842876" duration="618000" />
+      <workItem from="1726282127625" duration="15064000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1725494774526</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725494774526</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
