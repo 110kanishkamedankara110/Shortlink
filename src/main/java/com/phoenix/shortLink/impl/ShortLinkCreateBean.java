@@ -22,7 +22,7 @@ public class ShortLinkCreateBean implements CreateShortLink {
     @Override
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public String create(String link) throws Exception {
-        List<Link> links = em.createQuery("SELECT u FROM Link u WHERE u.link=:link").setParameter("link", link).getResultList();
+        List<Link> links = em.createQuery("SELECT u FROM Link u WHERE u.link=:link",Link.class).setParameter("link", link).getResultList();
         if (links.isEmpty()) {
             ShortUrl sl = new ShortUrl();
 
@@ -30,17 +30,17 @@ public class ShortLinkCreateBean implements CreateShortLink {
             l.setLink(link);
             em.persist(l);
             em.flush();
-            System.out.println();
+
 
             sl.setLink(l);
 
-            String id=UrlUuidShortener.generateUniqueShortID(new Long(l.getId()));
+            String id=UrlUuidShortener.generateUniqueShortID((long) l.getId());
 
-            List<ShortUrl> u = em.createQuery("SELECT u FROM ShortUrl u WHERE u.shortUrlId=:link").setParameter("link", id).getResultList();
+            List<ShortUrl> u = em.createQuery("SELECT u FROM ShortUrl u WHERE u.shortUrlId=:link",ShortUrl.class).setParameter("link", id).getResultList();
 
             while (!u.isEmpty()) {
                 id=UrlUuidShortener.generateUniqueShortID(new Long(l.getId()));
-                u = em.createQuery("SELECT u FROM ShortUrl u WHERE u.shortUrlId=:link").setParameter("link", id).getResultList();
+                u = em.createQuery("SELECT u FROM ShortUrl u WHERE u.shortUrlId=:link",ShortUrl.class).setParameter("link", id).getResultList();
             }
 
             sl.setShortUrlId(id);

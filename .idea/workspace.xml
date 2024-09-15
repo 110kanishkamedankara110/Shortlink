@@ -11,8 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca5b65e4-b412-49e8-88d2-ef5ec49f257e" name="Changes" comment="new algorythem to generate links and ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +204,8 @@
       <workItem from="1726299569066" duration="47000" />
       <workItem from="1726305647605" duration="8236000" />
       <workItem from="1726321410061" duration="4416000" />
-      <workItem from="1726326111613" duration="508000" />
+      <workItem from="1726326111613" duration="548000" />
+      <workItem from="1726387314471" duration="211000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -239,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726325615933</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new algorythem to generate links and ui">
+      <option name="closed" value="true" />
+      <created>1726326627589</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726326627589</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new algorythem to generate links and ui">
+      <option name="closed" value="true" />
+      <created>1726326649001</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726326649001</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
