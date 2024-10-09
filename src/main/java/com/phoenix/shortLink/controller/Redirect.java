@@ -41,11 +41,18 @@ public class Redirect {
                 .location(java.net.URI.create(link))
                 .build();
     }
+
     @GET
     @Path("/home")
-    public Viewable login() {
+    public Viewable home() {
         return new Viewable("/views/index.jsp");
     }
+
+    @GET
+    public Viewable index() {
+        return home();
+    }
+
 
     @GET
     @Path("/404")

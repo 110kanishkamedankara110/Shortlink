@@ -11,7 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ca5b65e4-b412-49e8-88d2-ef5ec49f257e" name="Changes" comment="new algorythem to generate links and ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/impl/ShortLinkCreateBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/Redirect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/phoenix/shortLink/controller/Redirect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +88,7 @@
       <recent name="com.phoenix.shortLink.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish 6.2.5">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="ShortLink" />
@@ -205,7 +208,11 @@
       <workItem from="1726305647605" duration="8236000" />
       <workItem from="1726321410061" duration="4416000" />
       <workItem from="1726326111613" duration="548000" />
-      <workItem from="1726387314471" duration="211000" />
+      <workItem from="1726387314471" duration="492000" />
+      <workItem from="1726571973386" duration="1909000" />
+      <workItem from="1727254536972" duration="919000" />
+      <workItem from="1727683899349" duration="1986000" />
+      <workItem from="1727962209064" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -255,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726326649001</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new algorythem to generate links and ui">
+      <option name="closed" value="true" />
+      <created>1726387687059</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726387687059</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

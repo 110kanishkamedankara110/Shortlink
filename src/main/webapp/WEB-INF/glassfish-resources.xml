@@ -22,5 +22,5 @@
 
 
 </jdbc-connection-pool>
-<jdbc-resource enabled="true" jndi-name="java:app/shortUrl-system" object-type="user" pool-name="mysql_short_url_system_rootPool"/>
+<jdbc-resource enabled="true" jndi-name="jdbc/shortLink" object-type="user" pool-name="mysql_short_url_system_rootPool"/>
 </resources>

@@ -5,7 +5,9 @@ public class Test {
 
 
 
-            System.out.println(UrlUuidShortener.generateUniqueShortID(new Long(1000)));
+            System.out.println(UrlUuidShortener.generateUniqueShortID(
+                    new Long(130)
+            ));
 
 
         // Output: 1
